@@ -242,6 +242,7 @@ NfcA? $GetNfcA(NfcTag arg) {
   return NfcA(
     tag: arg,
     identifier: data['identifier'],
+    standard: data['standard'],
     atqa: data['atqa'],
     sak: data['sak'],
     maxTransceiveLength: data['maxTransceiveLength'],

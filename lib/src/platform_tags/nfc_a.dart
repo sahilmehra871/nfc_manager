@@ -15,6 +15,7 @@ class NfcA {
   const NfcA({
     required NfcTag tag,
     required this.identifier,
+    required this.standard,
     required this.atqa,
     required this.sak,
     required this.maxTransceiveLength,
@@ -26,6 +27,9 @@ class NfcA {
 
   /// The value from Tag#id on Android.
   final Uint8List identifier;
+
+  ///Tag type
+  final String standard;
 
   /// The value from NfcA#atqa on Android.
   final Uint8List atqa;
