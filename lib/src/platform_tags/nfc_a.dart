@@ -54,7 +54,7 @@ class NfcA {
   Future<Uint8List> transceive({
     required Uint8List data,
   }) async {
-    return channel.invokeMethod('NfcA#transceive', {
+    return channel.invokeMethod('Nfc#Atransceive', {
       'handle': _tag.handle,
       'data': data,
     }).then((value) => value!);

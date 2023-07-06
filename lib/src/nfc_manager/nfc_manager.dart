@@ -126,6 +126,7 @@ class NfcTag {
   const NfcTag({
     required this.handle,
     required this.data,
+    required this.standard,
   });
 
   /// The value used by this plugin internally.
@@ -143,6 +144,7 @@ class NfcTag {
   /// }
   /// // Do something with an Ndef instance.
   /// ```
+  final String? standard;
   final Map<String, dynamic> data;
 }
 

@@ -72,6 +72,7 @@ NfcTag $GetNfcTag(Map<String, dynamic> arg) {
   return NfcTag(
     handle: arg.remove('handle'),
     data: arg,
+    standard: arg["standard"]
   );
 }
 
