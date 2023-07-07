@@ -43,6 +43,7 @@ class NfcA {
   /// The value from NfcA#timeout on Android.
   final int timeout;
 
+
   /// Get an instance of `NfcA` for the given tag.
   ///
   /// Returns null if the tag is not compatible with NfcA.

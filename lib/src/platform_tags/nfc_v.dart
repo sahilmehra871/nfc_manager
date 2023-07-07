@@ -14,6 +14,7 @@ class NfcV {
   /// Only instances obtained from the `NfcV.from` are valid.
   const NfcV({
     required NfcTag tag,
+    required this.standard,
     required this.identifier,
     required this.dsfId,
     required this.responseFlags,
@@ -25,7 +26,8 @@ class NfcV {
 
   /// The value from Tag#id on Android.
   final Uint8List identifier;
-
+  ///Tag type
+  final String standard;
   /// The value from NfcV#dsfId on Android.
   final int dsfId;
 

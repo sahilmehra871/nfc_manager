@@ -14,6 +14,7 @@ class NfcB {
   /// Only instances obtained from the `NfcB.from` are valid.
   const NfcB({
     required NfcTag tag,
+    required this.standard,
     required this.identifier,
     required this.applicationData,
     required this.protocolInfo,
@@ -25,7 +26,8 @@ class NfcB {
 
   /// The value from Tag#id on Android.
   final Uint8List identifier;
-
+  ///Tag type
+  final String standard;
   /// The value from NfcB#applicationData on Android.
   final Uint8List applicationData;
 

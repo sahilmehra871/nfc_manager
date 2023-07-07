@@ -47,7 +47,8 @@ fun getTagMap(arg: Tag): Map<String, Any?> {
           "atqa" to it.atqa,
           "maxTransceiveLength" to it.maxTransceiveLength,
           "sak" to it.sak,
-          "timeout" to it.timeout
+          "timeout" to it.timeout,
+          "standard" to "ISO 14443-3 (Type A) val a"
         )
       }
       NfcB::class.java.name -> NfcB.get(arg).let {
@@ -55,7 +56,8 @@ fun getTagMap(arg: Tag): Map<String, Any?> {
           "identifier" to arg.id,
           "applicationData" to it.applicationData,
           "maxTransceiveLength" to it.maxTransceiveLength,
-          "protocolInfo" to it.protocolInfo
+          "protocolInfo" to it.protocolInfo,
+          "standard" to "ISO 14443-3 (Type A) val b"
         )
       }
       NfcF::class.java.name -> NfcF.get(arg).let {
@@ -64,7 +66,8 @@ fun getTagMap(arg: Tag): Map<String, Any?> {
           "manufacturer" to it.manufacturer,
           "maxTransceiveLength" to it.maxTransceiveLength,
           "systemCode" to it.systemCode,
-          "timeout" to it.timeout
+          "timeout" to it.timeout,
+          "standard" to "ISO 14443-3 (Type A) val f"
         )
       }
       NfcV::class.java.name -> NfcV.get(arg).let {
@@ -72,7 +75,8 @@ fun getTagMap(arg: Tag): Map<String, Any?> {
           "identifier" to arg.id,
           "dsfId" to it.dsfId,
           "responseFlags" to it.responseFlags,
-          "maxTransceiveLength" to it.maxTransceiveLength
+          "maxTransceiveLength" to it.maxTransceiveLength,
+          "standard" to "ISO 14443-3 (Type A) val v"
         )
       }
       IsoDep::class.java.name -> IsoDep.get(arg).let {
@@ -82,7 +86,8 @@ fun getTagMap(arg: Tag): Map<String, Any?> {
           "historicalBytes" to it.historicalBytes,
           "isExtendedLengthApduSupported" to it.isExtendedLengthApduSupported,
           "maxTransceiveLength" to it.maxTransceiveLength,
-          "timeout" to it.timeout
+          "timeout" to it.timeout,
+          "standard" to "ISO 14443-3 (Type A) val iso"
         )
       }
       MifareClassic::class.java.name -> MifareClassic.get(arg).let {

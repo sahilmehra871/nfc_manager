@@ -269,6 +269,7 @@ NfcB? $GetNfcB(NfcTag arg) {
   return NfcB(
     tag: arg,
     identifier: data['identifier'],
+    standard: data['standard'],
     applicationData: data['applicationData'],
     protocolInfo: data['protocolInfo'],
     maxTransceiveLength: data['maxTransceiveLength'],
@@ -281,6 +282,7 @@ NfcF? $GetNfcF(NfcTag arg) {
   return NfcF(
     tag: arg,
     identifier: data['identifier'],
+    standard: data['standard'],
     manufacturer: data['manufacturer'],
     systemCode: data['systemCode'],
     maxTransceiveLength: data['maxTransceiveLength'],
@@ -294,6 +296,7 @@ NfcV? $GetNfcV(NfcTag arg) {
   return NfcV(
     tag: arg,
     identifier: data['identifier'],
+    standard: data['standard'],
     dsfId: data['dsfId'],
     responseFlags: data['responseFlags'],
     maxTransceiveLength: data['maxTransceiveLength'],

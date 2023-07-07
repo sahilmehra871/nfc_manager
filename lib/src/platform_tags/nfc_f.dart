@@ -14,6 +14,7 @@ class NfcF {
   /// Only instances obtained from the `NfcF.from` are valid.
   const NfcF({
     required NfcTag tag,
+    required this.standard,
     required this.identifier,
     required this.manufacturer,
     required this.systemCode,
@@ -26,7 +27,8 @@ class NfcF {
 
   /// The value from Tag#id on Android.
   final Uint8List identifier;
-
+  ///Tag type
+  final String standard;
   /// The value from NfcF#manufacturer on Android.
   final Uint8List manufacturer;
 
