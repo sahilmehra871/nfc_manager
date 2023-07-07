@@ -188,8 +188,19 @@ Ndef? $GetNdef(NfcTag arg) {
         : $GetNdefMessage(
             Map<String, dynamic>.from(data.remove('cachedMessage'))),
     additionalData: data,
-    standard:data.remove('standard')??data.keys,
+    standard:getStandard(arg)+data.keys.toString(),/*data.remove('standard')??data.keys*/
   );
+}
+
+String getStandard(NfcTag arg){
+  if (arg.data['iso7816'] == null){
+    return "iso7816";
+  }else if (arg.data['iso15693'] == null){
+    return "iso15693";
+  }else if (arg.data['iso14443'] == null){
+    return "iso14443";
+  }
+  return "unKnown";
 }
 
 FeliCa? $GetFeliCa(NfcTag arg) {
