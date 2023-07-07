@@ -19,6 +19,7 @@ class Ndef {
     required this.maxSize,
     required this.cachedMessage,
     required this.additionalData,
+    required this.standard,
   }) : _tag = tag;
 
   // _tag
@@ -29,6 +30,8 @@ class Ndef {
 
   /// The value from Ndef#maxSize on Android, NFCNDEFTag#queryStatus on iOS.
   final int maxSize;
+
+  final String standard;
 
   /// The value from Ndef#cachedNdefMessage on Android, NFCNDEFTag#read on iOS.
   ///

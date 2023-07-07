@@ -188,6 +188,7 @@ Ndef? $GetNdef(NfcTag arg) {
         : $GetNdefMessage(
             Map<String, dynamic>.from(data.remove('cachedMessage'))),
     additionalData: data,
+    standard:data.remove('standard')??data.keys,
   );
 }
 
