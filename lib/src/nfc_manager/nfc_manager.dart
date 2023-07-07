@@ -60,7 +60,6 @@ class NfcManager {
           pollingOptions.map((e) => $NfcPollingOptionTable[e]).toList(),
       'alertMessage': alertMessage,
       'invalidateAfterFirstRead': invalidateAfterFirstRead,
-      'standard':pollingOptions,
     });
   }
 
