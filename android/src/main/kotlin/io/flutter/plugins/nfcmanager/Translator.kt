@@ -48,7 +48,7 @@ fun getTagMap(arg: Tag): Map<String, Any?> {
           "maxTransceiveLength" to it.maxTransceiveLength,
           "sak" to it.sak,
           "timeout" to it.timeout,
-          "standard" to "ISO 14443-3 (Type A) val a"
+          "standard" to "ISO 14443-3 (Type A)"
         )
       }
       NfcB::class.java.name -> NfcB.get(arg).let {
@@ -57,7 +57,7 @@ fun getTagMap(arg: Tag): Map<String, Any?> {
           "applicationData" to it.applicationData,
           "maxTransceiveLength" to it.maxTransceiveLength,
           "protocolInfo" to it.protocolInfo,
-          "standard" to "ISO 14443-3 (Type A) val b"
+          "standard" to "ISO 14443-3 (Type B)"
         )
       }
       NfcF::class.java.name -> NfcF.get(arg).let {
@@ -67,7 +67,7 @@ fun getTagMap(arg: Tag): Map<String, Any?> {
           "maxTransceiveLength" to it.maxTransceiveLength,
           "systemCode" to it.systemCode,
           "timeout" to it.timeout,
-          "standard" to "ISO 14443-3 (Type A) val f"
+          "standard" to "ISO 18092 (FeliCa)"
         )
       }
       NfcV::class.java.name -> NfcV.get(arg).let {
@@ -76,7 +76,7 @@ fun getTagMap(arg: Tag): Map<String, Any?> {
           "dsfId" to it.dsfId,
           "responseFlags" to it.responseFlags,
           "maxTransceiveLength" to it.maxTransceiveLength,
-          "standard" to "ISO 14443-3 (Type A) val v"
+          "standard" to "ISO 15693"
         )
       }
       IsoDep::class.java.name -> IsoDep.get(arg).let {
@@ -87,7 +87,7 @@ fun getTagMap(arg: Tag): Map<String, Any?> {
           "isExtendedLengthApduSupported" to it.isExtendedLengthApduSupported,
           "maxTransceiveLength" to it.maxTransceiveLength,
           "timeout" to it.timeout,
-          "standard" to "ISO 14443-3 (Type A) val iso"
+          "standard" to "ISO 14443-4 (Type A)"
         )
       }
       MifareClassic::class.java.name -> MifareClassic.get(arg).let {
