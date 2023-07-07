@@ -72,7 +72,7 @@ NfcTag $GetNfcTag(Map<String, dynamic> arg) {
   return NfcTag(
     handle: arg.remove('handle'),
     data: arg,
-    standard: arg["standard"]??"No Data"
+    standard: arg.remove('standard')??"ISO 14443-3 (Type c)"
   );
 }
 
