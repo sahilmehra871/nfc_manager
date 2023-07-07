@@ -193,11 +193,11 @@ Ndef? $GetNdef(NfcTag arg) {
 }
 
 String getStandard(NfcTag arg){
-  if (arg.data['iso7816'] == null){
+  if (arg.data['iso7816'] != null){
     return "iso7816";
-  }else if (arg.data['iso15693'] == null){
+  }else if (arg.data['iso15693'] != null){
     return "iso15693";
-  }else if (arg.data['iso14443'] == null){
+  }else if (arg.data['iso14443'] != null){
     return "iso14443";
   }
   return "unKnown";
